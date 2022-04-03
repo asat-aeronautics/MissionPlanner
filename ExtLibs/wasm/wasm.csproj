@@ -52,9 +52,9 @@
     <PackageReference Include="System.Resources.Extensions" Version="6.0.0" />
     <PackageReference Include="System.Text.Encoding" Version="4.3.0" />
     <PackageReference Include="System.Text.Encoding.Extensions" Version="4.3.0" />
-    <PackageReference Include="Tewr.Blazor.FileReader" Version="3.3.0.21348" />
-    <PackageReference Include="Tewr.BlazorWorker.BackgroundService" Version="3.0.0" />
-    <PackageReference Include="Toolbelt.Blazor.SpeechSynthesis" Version="9.0.0" />
+    <PackageReference Include="Tewr.Blazor.FileReader" Version="3.3.1.21360" />
+    <PackageReference Include="Tewr.BlazorWorker.BackgroundService" Version="3.1.0" />
+    <PackageReference Include="Toolbelt.Blazor.SpeechSynthesis" Version="9.0.1" />
     <PackageReference Include="WebGLDotNET" Version="2.1.0" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
 
