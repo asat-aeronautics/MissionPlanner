@@ -79,6 +79,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="README.txt" />
     <Content Include="Resources\asat.bmp" />
     <Content Include="Resources\fire.bmp" />
   </ItemGroup>
