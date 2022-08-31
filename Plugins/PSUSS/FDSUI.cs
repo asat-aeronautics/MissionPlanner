@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 
+
 namespace PSUSS
 {
     public partial class FDSUI : MyUserControl
@@ -28,7 +29,7 @@ namespace PSUSS
             watcher.Created += OnCreated;
             watcher.EnableRaisingEvents = true;
 
-            //Indicates the properties of listview1 whitch was created on the designer
+            //Indicates the properties of listview1 which was created on the designer
             listView1.SmallImageList = imageList1;  
             listView1.LargeImageList = imageList1;
             listView1.Sorting = SortOrder.Descending;
@@ -53,13 +54,18 @@ namespace PSUSS
 
         private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            //displays the image that is selected and by default displays the last image recieved 
+           
             if (listView1.SelectedItems.Count > 0)
             {
+                //displays the image that is selected and by default displays the last image recieved 
                 var selectedImage = listView1.SelectedItems[0].Text;
                 var fullPath = Path.Combine(path, selectedImage);
                 pictureBox1.Image = Image.FromFile(fullPath);
                 pictureBox1.Show();
+
+                //displays the metadata of the selected image
+                string[] Row = selectedImage.Split(',');
+                dataGridView1.Rows[0].SetValues(Row);
             }       
         }
 
@@ -82,10 +88,16 @@ namespace PSUSS
             idx = idx + 1;
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        
+
     }
 }
 /* Button to stop the live feed / slide show
  * Change color when selected and while hover
  * change color of item when % > x
- * diplay image data
  */
